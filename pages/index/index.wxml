@@ -3,13 +3,13 @@
     <image class="user-image" src="/images/user.png"></image>
     <!-- 点赞 可用组件实现 -->
     <view class="like" bind:tap="onLike">
-      <image class="like-image" src="{{user.like_status?'/images/like.png':'/images/like_false.png'}}"></image>
+      <image class="like-image" src="/images/like_false.png"></image>
       <text class="like-num">{{user.like}}</text>
       <text>赞</text>
     </view>
     <!-- 近期来访 -->
     <view class="mark">
-      <text>98</text>
+      <text>{{user.look_history}}</text>
       近期来访
     </view>
     <!-- 功能图标 -->
@@ -30,33 +30,33 @@
     <!-- 用户介绍 -->
     <view class="user-introduce">
       <view class="introduce-title">
-        <text class="name">谢炎芩</text>
-        <text class="motto">一切法律的总目标应当是增加社会幸福</text>
+        <text class="name">{{user.name}}</text>
+        <text class="motto">{{user.motto}}</text>
       </view>
-      <text class="introduce-content">英国华威大学法学院毕业，执业律师，注册税务师，华税学员合伙人讲师，拥有证券、基金从业资格证，专注于税务规划及家庭财富传承。</text>
+      <text class="introduce-content">{{user.introduce}}</text>
     </view>
 
     <!-- 用户信息 -->
     <view class="user-info">
       <view class="info-imp">
         <image class="icon" src="/images/smail-icon/phone.png"></image>
-        <text>18602420226</text>
+        <text>{{user.phone}}</text>
       </view>
       <view class="info-imp">
         <image class="icon" src="/images/smail-icon/email.png"></image>
-        <text>yancen.xie@dentons.cn</text>
+        <text>{{user.email}}</text>
       </view>
       <view>
         <image class="icon" src="/images/smail-icon/home.png"></image>
-        <text>北京大成（沈阳）律师事务所</text>
+        <text>{{user.company}}</text>
       </view>
       <view>
         <image class="icon" src="/images/smail-icon/star.png"></image>
-        <text>税务规划、涉税争议解决、财富传承</text>
+        <text>{{user.job}}</text>
       </view>
       <view>
         <image class="icon" src="/images/smail-icon/position.png"></image>
-        <text>辽宁省沈阳市沈河区青年大街1号Forcm66市府恒隆广场42层</text>
+        <text>{{user.position}}</text>
       </view>
       <view>
         <image class="icon" src="/images/smail-icon/wechat.png"></image>
