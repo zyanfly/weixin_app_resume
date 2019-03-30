@@ -1,0 +1,80 @@
+<view class="container">
+  <view class="head-image">
+    <image class="user-image" src="/images/user.png"></image>
+    <!-- 点赞 可用组件实现 -->
+    <view class="like" bind:tap="onLike">
+      <image class="like-image" src="{{user.like_status?'/images/like.png':'/images/like_false.png'}}"></image>
+      <text class="like-num">{{user.like}}</text>
+      <text>赞</text>
+    </view>
+    <!-- 近期来访 -->
+    <view class="mark">
+      <text>98</text>
+      近期来访
+    </view>
+    <!-- 功能图标 -->
+    <view class="function">
+      <view class="func-image" bind:tap="makePhone">
+        <image src="/images/phone.png"></image>
+      </view>
+      <view class="func-image">
+        <image src="/images/position.png"></image>
+      </view>
+      <view class="func-image">
+        <image src="/images/share.png"></image>
+      </view>
+    </view>
+    
+  </view>
+  <view class="user-container">
+    <!-- 用户介绍 -->
+    <view class="user-introduce">
+      <view class="introduce-title">
+        <text class="name">谢炎芩</text>
+        <text class="motto">一切法律的总目标应当是增加社会幸福</text>
+      </view>
+      <text class="introduce-content">英国华威大学法学院毕业，执业律师，注册税务师，华税学员合伙人讲师，拥有证券、基金从业资格证，专注于税务规划及家庭财富传承。</text>
+    </view>
+
+    <!-- 用户信息 -->
+    <view class="user-info">
+      <view class="info-imp">
+        <image class="icon" src="/images/smail-icon/phone.png"></image>
+        <text>18602420226</text>
+      </view>
+      <view class="info-imp">
+        <image class="icon" src="/images/smail-icon/email.png"></image>
+        <text>yancen.xie@dentons.cn</text>
+      </view>
+      <view>
+        <image class="icon" src="/images/smail-icon/home.png"></image>
+        <text>北京大成（沈阳）律师事务所</text>
+      </view>
+      <view>
+        <image class="icon" src="/images/smail-icon/star.png"></image>
+        <text>税务规划、涉税争议解决、财富传承</text>
+      </view>
+      <view>
+        <image class="icon" src="/images/smail-icon/position.png"></image>
+        <text>辽宁省沈阳市沈河区青年大街1号Forcm66市府恒隆广场42层</text>
+      </view>
+      <view>
+        <image class="icon" src="/images/smail-icon/wechat.png"></image>
+        <image class="qrcode" src="/images/qrcode.png"></image>
+        <text class="add-wechat">·点击添加微信</text>
+      </view>
+      <view>
+        <view class="icon"></view>
+        <view class="save">保存通讯录</view>
+      </view>
+    </view>
+
+    <!-- 客户评价 -->
+    <view class="comments">
+      <text>客户评论</text>
+      <textarea class="comments-content" placeholder='请输入您的评论，入选后将显示在评论列表中。'></textarea>
+      <view class="submit">发表</view>
+    </view>
+  </view>
+
+</view>
