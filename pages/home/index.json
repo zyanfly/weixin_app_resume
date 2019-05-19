@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+      "v-button": "/components/image-button/index",
+      "v-basic": "/components/basic/index",
+      "v-social": "/components/social-add/index",
+      "v-comment": "/components/comments/index"
+  }
+}

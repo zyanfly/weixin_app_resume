@@ -1,3 +1,8 @@
 page{
   color:#4b4b4b;
 }
+
+/* page{
+    font-family: "PingFangSC-Thin";
+    font-size:32rpx;
+} */

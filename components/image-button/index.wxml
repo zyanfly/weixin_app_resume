@@ -1,0 +1,9 @@
+<button 
+    bind:getuserinfo="onGetUserInfo" 
+    bind:tap="redirectAddress" 
+    bind:tap="makePhone" 
+    open-type='{{openType}}'  
+    plain='{{true}}'
+    class="container" >
+    <slot name="img"></slot>
+</button>

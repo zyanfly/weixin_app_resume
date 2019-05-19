@@ -1,0 +1,42 @@
+<view class="container">
+    <view class="head-image">
+        <image class="user-image" src="{{basic.avatar}}"></image>
+        <!-- 近期来访 -->
+        <view class="mark">
+            <text>{{basic.visit}}</text> 次近期来访
+        </view>
+        <!-- 功能图标 -->
+        <view class="function">
+            <v-button class="func-image" bind:ring="makePhone">
+                <image slot="img" src="/images/phone.png" />
+            </v-button>
+            <view class="func-image" bind:tap="redirectAddress">
+                <image src="/images/position.png" />
+            </view>      
+            <v-button class="func-image" open-type="share">
+                <image slot="img" src="/images/share.png" />
+            </v-button>
+        </view>
+    </view>
+
+    <v-basic basic="{{basic}}" />
+    <v-social bind:wechat="addWechat" bind:phone="addPhone"/>
+
+    <view class="user-container">
+        <!-- 客户评价 -->
+        <view class="comments">
+            <text>客户评论</text>
+            <form bind:submit="formSubmit">
+                <input class="comments-content" placeholder='请输入您的评论，入选后将显示在评论列表中。' name='content'></input>
+                <button form-type="submit" wx:if="{{authorized}}" class="submit">已经登录</button>
+            </form>
+        </view>
+
+        <v-button wx:if="{{!authorized}}" open-type="getUserInfo" bind:getuserinfo="onGetUserInfo">
+            <view slot="img" class="submit"> 未登录</view>
+        </v-button>
+    </view>
+</view>
+
+<v-comment comments="{{comments}}" />
+<view bind:tap="getSupport">象科技提供小程序开发支持</view>

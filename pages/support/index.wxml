@@ -1,0 +1,10 @@
+<view>
+    <view class="comments">
+        <form bind:submit="formSubmit">
+            <input placeholder='您的姓名' name='name'></input>
+            <input placeholder='您的微信或者电话号码' name='contact'></input>
+            <button form-type="submit">提交</button>
+        </form>
+    </view>
+    我们将在工作日24小时之内联系您
+</view>

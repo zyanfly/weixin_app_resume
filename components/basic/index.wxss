@@ -1,0 +1,65 @@
+/* 用户简介 */
+.user-container {
+    padding: 50rpx;
+    box-sizing: border-box;
+}
+
+.user-introduce {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30rpx;
+    border-bottom: 1px solid #ddd;
+}
+
+.introduce-title {
+    display: flex;
+    align-items: center;
+    margin-top: 25rpx;
+}
+
+.name {
+    font-size: 34rpx;
+    margin-right: 36rpx;
+}
+
+.motto {
+    font-size: 26rpx;
+    line-height: 26rpx;
+    color: #aaa;
+}
+
+.introduce-content {
+    margin-top: 20rpx;
+    font-size: 24rpx;
+    color: #9c7e4b;
+    line-height: 40rpx;
+}
+
+/* 用户信息 */
+.user-info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30rpx;
+    padding-bottom: 30rpx;
+    font-size: 24rpx;
+    border-bottom: 1px solid #ddd;
+}
+
+.user-info > view {
+    display: flex;
+    /* height:50rpx; */
+    margin: 8rpx 0;
+    align-items: center;
+}
+
+.icon {
+    width: 26rpx;
+    height: 26rpx;
+    margin-right: 20rpx;
+}
+
+.info-imp {
+    color: #9c7e4b;
+    font-size: 24rpx;
+}
+

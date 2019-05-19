@@ -1,0 +1,9 @@
+<view>
+    <block wx:key="id" wx:for="{{comments}}">
+        <view>
+            <text>{{item.guest.nickname}}</text>
+            <image src="{{item.guest.avatar}}" class="avatar" />
+            <text>{{item.content}}</text>
+        </view>
+    </block>
+</view>
