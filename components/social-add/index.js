@@ -1,5 +1,8 @@
 Component({
     properties: {
+        basic: {
+            type: Object
+        }
     },
 
     data: {
@@ -7,16 +10,15 @@ Component({
     },
 
     methods: {
-        addWechat: function () {
-            var myEventDetail = {}
-            var myEventOption = {}
-            this.triggerEvent('wechat', myEventDetail, myEventOption)
+        addWechat: function (event) {
+            console.log("add wechat")
         },
 
-        addPhone: function () {
-            var myEventDetail = {}
-            var myEventOption = {}
-            this.triggerEvent('phone', myEventDetail, myEventOption)
-        }
+        addPhone: function (event) {
+            wx.addPhoneContact({
+                firstName: this.data.basic.name,
+                mobilePhoneNumber: this.data.basic.phone,
+            })
+        },
     }
 })

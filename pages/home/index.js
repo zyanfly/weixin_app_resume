@@ -50,34 +50,6 @@ Page({
             })
     },
 
-    makePhone: function(event) {
-        console.log(this.data.basic.phone)
-        wx.makePhoneCall({
-            phoneNumber: this.data.basic.phone
-        })
-    },
-
-    redirectAddress: function(event) {
-        console.log(this.data.location)
-        wx.openLocation({
-            latitude: parseFloat(this.data.location.latitude),
-            longitude: parseFloat(this.data.location.longitude),
-            name: this.data.location.name,
-            address: this.data.location.address
-        })
-    },
-
-    addWechat: function(event) {
-        console.log("add wechat")
-    },
-
-    addPhone: function(event) {
-        wx.addPhoneContact({
-            firstName: this.data.basic.name,
-            mobilePhoneNumber: this.data.basic.phone,
-        })
-    },
-
     onShareAppMessage: function() {
         return {
             title: '转发名片',
@@ -100,12 +72,6 @@ Page({
                     })
                 }
             }
-        })
-    },
-
-    getSupport: function(e) {
-        wx.navigateTo({
-            url: '/pages/support/index'
         })
     }
 })

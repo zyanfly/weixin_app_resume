@@ -1,6 +1,6 @@
 <v-head basic="{{basic}}" location="{{location}}" />
 <v-basic basic="{{basic}}" />
-<v-social bind:wechat="addWechat" bind:phone="addPhone" />
+<v-social basic="{{basic}}" />
 <v-comment authorized="{{authorized}}" />
 <v-comments comments="{{comments}}" />
 <v-support />
