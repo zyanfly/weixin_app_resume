@@ -5,22 +5,24 @@ import {
     GuestModel
 } from '../../models/guest'
 import {
-    CommentModel
-} from '../../models/comment'
-import {
     LocationModel
 } from '../../models/location'
+import {
+    CommentModel
+} from '../../models/comment'
+
 
 const basicModel = new BasicModel()
 const guestModel = new GuestModel()
-const commentModel = new CommentModel()
 const locationModel = new LocationModel()
+const commentModel = new CommentModel()
 
 Page({
     data: {
         like: 999,
         like_status: 0,
         basic: null,
+        location: null,
         authorized: false,
         userInfo: null,
         comments: []
@@ -34,16 +36,16 @@ Page({
                     basic: res
                 })
             })
-        commentModel.getComments()
-            .then(res => {
-                this.setData({
-                    comments: res
-                })
-            })
         locationModel.getLocation()
             .then(res => {
                 this.setData({
                     location: res
+                })
+            })
+        commentModel.getComments()
+            .then(res => {
+                this.setData({
+                    comments: res
                 })
             })
     },
@@ -98,31 +100,6 @@ Page({
                     })
                 }
             }
-        })
-    },
-
-    onGetUserInfo(event) {
-        const userInfo = event.detail.userInfo;
-        if (userInfo) {
-            this.setData({
-                authorized: true,
-                userInfo
-            })
-        }
-        console.log(userInfo);
-        guestModel.updateGuest(userInfo.nickName, userInfo.avatarUrl);
-    },
-
-    formSubmit: function(e) {
-        commentModel.createComment(e.detail.value.content)
-            .then(res => {
-                wx.showToast({
-                    title: '评论成功',
-                    icon: "none"
-                })
-            })
-        this.setData({
-            comments: this.data.comments,
         })
     },
 

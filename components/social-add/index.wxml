@@ -1,4 +1,6 @@
-<view class="user-container">
-    <view class="save" bind:tap="addWechat">添加微信好友</view>
-    <view class="save" bind:tap="addPhone">添加手机号码</view>
+<view class="container">
+    <view class="user-container">
+        <view class="save" bind:tap="addWechat">添加微信好友</view>
+        <view class="save" bind:tap="addPhone">添加手机号码</view>
+    </view>
 </view>

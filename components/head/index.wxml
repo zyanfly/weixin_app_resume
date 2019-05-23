@@ -1,0 +1,19 @@
+<view class="container">
+    <view class="head-image">
+        <image class="user-image" src="{{basic.avatar}}"></image>
+        <view class="mark">
+            <text>{{basic.visit}}</text> 次近期来访
+        </view>
+        <view class="function">
+            <view class="func-image" bind:tap="makePhone">
+                <image src="/images/phone.png" />
+            </view>
+            <view class="func-image" bind:tap="redirectAddress">
+                <image src="/images/position.png" />
+            </view>
+            <v-button class="func-image" open-type="share">
+                <image slot="img" src="/images/share.png" />
+            </v-button>
+        </view>
+    </view>
+</view>

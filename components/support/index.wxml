@@ -1,0 +1,1 @@
+<view bind:tap="getSupport">象科技提供小程序开发支持</view>

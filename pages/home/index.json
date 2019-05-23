@@ -3,6 +3,9 @@
       "v-button": "/components/image-button/index",
       "v-basic": "/components/basic/index",
       "v-social": "/components/social-add/index",
-      "v-comment": "/components/comments/index"
+      "v-comments": "/components/comments/index",
+      "v-comment": "/components/comment/index",
+      "v-head": "/components/head/index",
+      "v-support": "/components/support/index"
   }
 }

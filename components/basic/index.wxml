@@ -1,38 +1,40 @@
-<view class="user-container">
-    <!-- 用户介绍 -->
-    <view class="user-introduce">
-        <view class="introduce-title">
-            <text wx:if="{{basic.is_name}}" class="name">{{basic.name}}</text>
-            <text wx:if="{{basic.is_motto}}" class="motto">{{basic.motto}}</text>
+<view class="container">
+    <view class="user-container">
+        <!-- 用户介绍 -->
+        <view class="user-introduce">
+            <view class="introduce-title">
+                <text wx:if="{{basic.is_name}}" class="name">{{basic.name}}</text>
+                <text wx:if="{{basic.is_motto}}" class="motto">{{basic.motto}}</text>
+            </view>
+            <text wx:if="{{basic.is_introduction}}" class="introduce-content">{{basic.introduction}}</text>
         </view>
-        <text wx:if="{{basic.is_introduction}}" class="introduce-content">{{basic.introduction}}</text>
-    </view>
 
-    <!-- 用户信息 -->
-    <view class="user-info">
-        <view wx:if="{{basic.is_phone}}" class="info-imp">
-            <image class="icon" src="/images/smail-icon/phone.png"></image>
-            <text>{{basic.phone}}</text>
-        </view>
-        <view wx:if="{{basic.is_wechat}}" class="info-imp">
-            <image class="icon" src="/images/smail-icon/wechat.png"></image>
-            <text>{{basic.wechat}}</text>
-        </view>
-        <view wx:if="{{basic.is_email}}" class="info-imp">
-            <image class="icon" src="/images/smail-icon/email.png"></image>
-            <text>{{basic.email}}</text>
-        </view>
-        <view wx:if="{{basic.is_company}}">
-            <image class="icon" src="/images/smail-icon/home.png"></image>
-            <text>{{basic.company}}</text>
-        </view>
-        <view wx:if="{{basic.is_job}}">
-            <image class="icon" src="/images/smail-icon/star.png"></image>
-            <text>{{basic.job}}</text>
-        </view>
-        <view wx:if="{{basic.is_address}}">
-            <image class="icon" src="/images/smail-icon/position.png"></image>
-            <text>{{basic.address}}</text>
+        <!-- 用户信息 -->
+        <view class="user-info">
+            <view wx:if="{{basic.is_phone}}" class="info-imp">
+                <image class="icon" src="/images/smail-icon/phone.png"></image>
+                <text>{{basic.phone}}</text>
+            </view>
+            <view wx:if="{{basic.is_wechat}}" class="info-imp">
+                <image class="icon" src="/images/smail-icon/wechat.png"></image>
+                <text>{{basic.wechat}}</text>
+            </view>
+            <view wx:if="{{basic.is_email}}" class="info-imp">
+                <image class="icon" src="/images/smail-icon/email.png"></image>
+                <text>{{basic.email}}</text>
+            </view>
+            <view wx:if="{{basic.is_company}}">
+                <image class="icon" src="/images/smail-icon/home.png"></image>
+                <text>{{basic.company}}</text>
+            </view>
+            <view wx:if="{{basic.is_job}}">
+                <image class="icon" src="/images/smail-icon/star.png"></image>
+                <text>{{basic.job}}</text>
+            </view>
+            <view wx:if="{{basic.is_address}}">
+                <image class="icon" src="/images/smail-icon/position.png"></image>
+                <text>{{basic.address}}</text>
+            </view>
         </view>
     </view>
 </view>
