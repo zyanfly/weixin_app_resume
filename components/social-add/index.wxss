@@ -1,10 +1,13 @@
-/* 用户简介 */
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
 .user-container {
     padding: 50rpx;
     box-sizing: border-box;
 }
 
-/* 用户信息 */
 .add-wechat {
     color: #aaa;
     font-size: 20rpx;
