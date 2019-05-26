@@ -1,6 +1,7 @@
 .container {
     display: flex;
     flex-direction: column;
+    padding:0 50rpx 50rpx 50rpx;
 }
 
 .comments {
@@ -21,12 +22,13 @@
 }
 
 .submit {
-    align-self: flex-end;
+    float:right;
+    /* align-self:flex-end; */
     background-color: #9c7e4b;
     color: #fff;
     font-size: 24rpx;
     line-height: 24rpx;
-    padding: 10rpx 15rpx;
+    padding: 20rpx 30rpx;
     border-radius: 2px;
 }
 

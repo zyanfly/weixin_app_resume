@@ -1,16 +1,16 @@
 <view class="container">
-    <view class="user-container">
-        <!-- 客户评价 -->
-        <view class="comments">
-            <text>客户评论</text>
-            <form bind:submit="formSubmit">
-                <input class="comments-content" placeholder='请输入您的评论，入选后将显示在评论列表中。' name='content'></input>
-                <button form-type="submit" wx:if="{{authorized}}" class="submit">已经登录</button>
-            </form>
-        </view>
-
-        <v-button wx:if="{{!authorized}}" open-type="getUserInfo" bind:getuserinfo="onGetUserInfo">
-            <view slot="img" class="submit"> 未登录</view>
-        </v-button>
+    <!-- 客户评价 -->
+    <view class="comments">
+        <text>客户评论</text>
+        <form bind:submit="formSubmit">
+            <textarea class="comments-content" placeholder='请输入您的评论，入选后将显示在评论列表中。' name='content'></textarea>
+            <button form-type="submit" wx:if="{{authorized}}" class="submit">发送</button>
+            <button 
+            wx:if="{{!authorized}}" 
+            open-type="getUserInfo" bind:getuserinfo="onGetUserInfo" 
+            class="submit">
+                未登录
+            </button>
+        </form>
     </view>
 </view>
