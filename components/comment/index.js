@@ -26,6 +26,9 @@ Component({
                         title: '评论成功',
                         icon: "none"
                     })
+                }).
+                catch(res => {
+                    console.log(res);
                 })
         },
         onGetUserInfo(event) {

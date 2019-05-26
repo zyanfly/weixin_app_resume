@@ -1,9 +1,5 @@
 import { config } from 'config'
 
-const tips = {
-    1: '抱歉，出现了一个错误'
-}
-
 class HTTP {
     request({ url, data = {}, method = 'GET' }) {
         return new Promise((resolve, reject) => {
@@ -26,31 +22,23 @@ class HTTP {
                 }
                 else {
                     reject()
-                    const error_code = res.data.error_code
-                    this._show_error(error_code)
+                    wx.showToast({
+                        title: res.data.error,
+                        icon: 'none',
+                        duration: 2000
+                    })
                 }
             },
             fail: (err) => {
                 reject()
-                this._show_error(1)
+                wx.showToast({
+                    title: '抱歉，出现了一个错误',
+                    icon: 'none',
+                    duration: 2000
+                })
             }
         })
-
     }
-
-    _show_error(error_code) {
-        if (!error_code) {
-            error_code = 1
-        }
-        const tip = tips[error_code]
-        wx.showToast({
-            title: tip ? tip : tips[1],
-            icon: 'none',
-            duration: 2000
-        })
-    }
-
-
 }
 
 export { HTTP }
