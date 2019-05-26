@@ -1,9 +1,12 @@
-<view>
+<view class="comments_container">
+    <text class="title">精选评论</text>
     <block wx:key="id" wx:for="{{comments}}">
-        <view>
-            <text>{{item.guest.nickname}}</text>
+        <view class="comments_item">
             <image src="{{item.guest.avatar}}" class="avatar" />
-            <text>{{item.content}}</text>
+            <view class="item_right">
+                <text class="comments_name">{{item.guest.nickname}}</text>
+                <text class="comments_content">{{item.content}}</text>
+            </view>
         </view>
     </block>
 </view>

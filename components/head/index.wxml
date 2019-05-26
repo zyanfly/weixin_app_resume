@@ -11,9 +11,9 @@
             <view class="func-image" bind:tap="redirectAddress">
                 <image src="/images/position.png" />
             </view>
-            <v-button class="func-image" open-type="share">
+            <button class="func-image" open-type="share">
                 <image slot="img" src="/images/share.png" />
-            </v-button>
+            </button>
         </view>
     </view>
 </view>
