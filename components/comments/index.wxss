@@ -33,4 +33,5 @@
 .comments_content{
     display:flex;
     flex-wrap: wrap;
+    font-size:12px;
 }
